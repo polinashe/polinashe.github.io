@@ -53,6 +53,7 @@ h1 {
   text-transform: uppercase;
   font-size: 36px;
   color: #010101;
+  margin: 20px 0;
 }
 
 h2 {
@@ -60,6 +61,7 @@ h2 {
   text-transform: none;
   font-size: 18px;
   color: #191919;
+  margin: 20px 0;
 }
 
 a {
@@ -68,17 +70,15 @@ a {
   color: #0055d8;
 }
 
-p {
-  margin: 20px 0;
-}
-
 .range_header {
   text-align: center;
+  padding: 0 0 20px;
 }
 
 .range_info {
   text-align: left;
   border-bottom: 1px solid #c8c4c3;
+  padding: 0 0 20px;
 }
 
 .info_header {
