@@ -1,0 +1,211 @@
+@font-face {
+    font-family: "OpenSansRegular";
+    src: url("../fonts/OpenSansRegular/OpenSansRegular.eot");
+    src: url("../fonts/OpenSansRegular/OpenSansRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/OpenSansRegular/OpenSansRegular.woff") format("woff"),
+    url("../fonts/OpenSansRegular/OpenSansRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 1060px;
+  margin: 0 auto;
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 5px rgba(0,0,0,.3);
+  -moz-box-shadow: 0 5px 5px rgba(0,0,0,.3);
+  box-shadow: 0 5px 5px rgba(0,0,0,.3);
+}
+
+.content {
+  width: 966px;
+  margin: 0 calc((1060px - 966px)/2);
+  padding-bottom: 62px;
+}
+
+/*----------------- HEADER ----------------*/
+
+header {
+  width: 100%;
+}
+
+.logo-box {
+  width: 100%;
+  height: 90px;
+}
+
+.logo-box img {
+  position: relative;
+  top: 50px;
+  left: 0;
+}
+
+.main-menu-box {
+  width: 100%;
+  height: 40px;
+  margin: 42px 0;
+  background-color: #fff;
+	background-image: -webkit-linear-gradient(bottom, #444343, #5e5e5e);
+  background-image: -moz-linear-gradient(bottom, #444343, #5e5e5e);
+  background-image: -o-linear-gradient(bottom, #444343, #5e5e5e);
+  background-image: -ms-linear-gradient(bottom, #444343, #5e5e5e);
+  background-image: linear-gradient(to top, #444343, #5e5e5e);
+}
+
+.main-menu-box ul li {
+  float: left;
+}
+
+.main-menu-box ul li a {
+  color: #fff;
+  padding: 0 28px;
+  font-family: "OpenSansRegular", Arial, sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+  line-height: 40px;
+  display: block;
+  height: 40px;
+}
+
+.main-menu-box ul li a:first-child {
+  padding-left: 25px;
+}
+
+.main-menu-box ul li a:hover {
+  border-left: 1px solid #838383;
+  border-right: 1px solid #838383;
+  background-color: #fff;
+	background-image: -webkit-linear-gradient(bottom, #2e2e2e, #4a4a4a);
+	background-image: -moz-linear-gradient(bottom, #2e2e2e, #4a4a4a);
+	background-image: -o-linear-gradient(bottom, #2e2e2e, #4a4a4a);
+	background-image: -ms-linear-gradient(bottom, #2e2e2e, #4a4a4a);
+	background-image: linear-gradient(to top, #2e2e2e, #4a4a4a);
+}
+
+/*----------------- CONTENT (LEFT MENU & IMAGE WITH TEXT) ----------------*/
+
+.box-for-2-columns {
+  width: 100%;
+  padding-bottom: 60px;
+}
+
+.left-column {
+  float: left;
+}
+
+.left-column {
+  width: 238px;
+  margin-right: 44px;
+  border: 1px solid #c8c8c8;
+}
+
+.left-column ul li {
+  border-bottom: 1px solid #c8c8c8;
+}
+
+.left-column ul li:last-child {
+  border-bottom: none;
+}
+
+.left-column ul li a {
+  color: #656363;
+  font-family: "OpenSansRegular", Arial, sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  line-height: 39px;
+  display: block;
+  padding-left: 23px;
+}
+
+.left-column ul li a:hover {
+  color: #2c2c2c;
+  background: #f9f9f9;
+  padding-left: 35px;
+}
+
+.right-column {
+  float: right;
+  width: 680px;
+}
+
+.right-column-img {
+  width: 678px;
+  height: 388px;
+  border: 1px solid #c8c8c8;
+  margin-bottom: 42px;
+  position: relative;
+}
+
+.right-column img {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.right-column p {
+  font-family: "OpenSansRegular", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/*----------------- FOOTER ----------------*/
+
+footer {
+  width: 100%;
+  clear: both;
+}
+
+.bottom-menu-box {
+  width: 100%;
+  height: 40px;
+  background-color: #e1e1e1;
+
+}
+
+.bottom-menu-box ul li {
+  float: left;
+}
+
+.bottom-menu-box ul li a {
+  color: #2c2c2c;
+  padding: 0 28px;
+  font-family: "OpenSansRegular", Arial, sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  line-height: 40px;
+  display: block;
+  height: 40px;
+}
+
+.bottom-menu-box ul li a:first-child {
+  padding-left: 25px;
+}
+
+.bottom-menu-box ul li:last-child {
+  float: right;
+  padding-right: 25px;
+  color: #2c2c2c;
+  font-family: "OpenSansRegular", Arial, sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  line-height: 40px;
+}
+
+.bottom-menu-box ul li a:hover {
+  text-decoration: underline;
+}
+
+.bottom-menu-box p {
+  font-family: "OpenSansRegular", Arial, sans-serif;
+	font-size: 13px;
+  line-height: 33px;
+	color: #2c2c2c;
+}
