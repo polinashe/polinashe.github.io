@@ -10,8 +10,6 @@
   font-style: normal;
 }
 
-
-
 body {
   background-color: #fff;
   background: black url('../img/bg.jpg');
@@ -43,7 +41,7 @@ header {
   left: 0;
 }
 
-.big-letters {
+h1 {
  color: #e6e6e6;
  font-family: "TahomaRegular", Arial, sans-serif;
  font-size: 12px;
@@ -52,7 +50,7 @@ header {
  line-height: 1.4;
 }
 
-.small-letters {
+h3 {
  color: #e6e6e6;
  font-family: "TahomaRegular", Arial, sans-serif;
  font-size: 10px;
@@ -68,23 +66,20 @@ header {
   float: right;
   height: 50px;
   position: relative;
-  top: 140px;
+  top: 146px;
   right: 14px;
 }
 
 /*----------------- CONTENT ----------------*/
 
-.gallery-padding-top {
-  padding-top: 50px;
-}
-
 .gallery figure {
   float: left;
   text-align: center;
   width: 270px;
+  margin-bottom: 50px;
 }
 
-.gallery figure:nth-child(2) {
+.gallery figure:nth-child(2), .gallery figure:nth-child(5) {
   width: 278px;
 }
 
@@ -100,11 +95,15 @@ figcaption {
 footer {
   width: 100%;
   text-align: center;
-  padding-top: 188px;
+  padding-top: 138px;
 }
 
-footer .big-letters {
-  text-transform: none;
+h2 {
+ color: #e6e6e6;
+ font-family: "TahomaRegular", Arial, sans-serif;
+ font-size: 12px;
+ text-transform: none;
+ line-height: 1.4;
 }
 
 .clearfix:after {
