@@ -157,15 +157,11 @@ header {
 
 footer {
   width: 100%;
-}
-
-.bottom-menu-box {
-  width: 100%;
   height: 40px;
   background-color: #e1e1e1;
 }
 
-.bottom-box-text {
+.footer-text {
   color: #2c2c2c;
   font-family: "OpenSansRegular", Arial, sans-serif;
   font-size: 13px;
@@ -173,21 +169,21 @@ footer {
   line-height: 40px;
 }
 
-.bottom-menu-box ul li {
+footer ul li {
   float: left;
 }
 
-.bottom-menu-box ul li a {
+footer ul li a {
   padding: 0 28px;
   display: block;
   height: 40px;
 }
 
-.bottom-menu-box ul li a:first-child {
+footer ul li a:first-child {
   padding-left: 25px;
 }
 
-.bottom-menu-box ul li a:hover {
+footer ul li a:hover {
   text-decoration: underline;
 }
 
