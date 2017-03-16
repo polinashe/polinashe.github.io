@@ -1,20 +1,20 @@
 @font-face {
-  font-family: 'Tahoma';
-  src: local("Tahoma"), local("TahomaRegular"),
-           url('../fonts/Tahoma-Regular/Tahoma-Regular.eot');
-           url('../fonts/Tahoma-Regular/Tahoma-Regular.eot?#iefix') format('embedded-opentype'),
-           url('../fonts/Tahoma-Regular/Tahoma-Regular.woff') format('woff'),
-           url('../fonts/Tahoma-Regular/Tahoma-Regular.ttf') format('truetype'),
-           url('../fonts/Tahoma-Regular/Tahoma-Regular.svg#Tahoma-Regular') format('svg');
-  font-weight: 400;
-  font-style: normal;
+    font-family: 'Tahoma';
+    src: local("Tahoma"), local("TahomaRegular"),
+         url('../fonts/Tahoma-Regular/Tahoma-Regular.eot');
+    src: url('../fonts/Tahoma-Regular/Tahoma-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Tahoma-Regular/Tahoma-Regular.woff') format('woff'),
+         url('../fonts/Tahoma-Regular/Tahoma-Regular.ttf') format('truetype'),
+         url('../fonts/Tahoma-Regular/Tahoma-Regular.svg#Tahoma-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
    font-family: 'Tahoma';
     src: local("Tahoma"), local("TahomaBold"),
          url('../fonts/Tahoma-Bold/Tahoma-Bold.eot');
-         url('../fonts/Tahoma-Bold/Tahoma-Bold.eot?#iefix') format('embedded-opentype'),
+    src: url('../fonts/Tahoma-Bold/Tahoma-Bold.eot?#iefix') format('embedded-opentype'),
          url('../fonts/Tahoma-Bold/Tahoma-Bold.woff') format('woff'),
          url('../fonts/Tahoma-Bold/Tahoma-Bold.ttf') format('truetype'),
          url('../fonts/Tahoma-Bold/Tahoma-Bold.svg#Tahoma-Bold') format('svg');
@@ -27,7 +27,7 @@ body {
   background: -moz-linear-gradient(top, #128aa7 4%, #19b4ca 1%, #fff 20.5%, #6ad2dc 20.5%, #0c739f 100%);
   background: -webkit-linear-gradient(top, #128aa7 4%,#19b4ca 1%,#fff 20.5%,#6ad2dc 20.5%,#0c739f 100%);
   background: linear-gradient(to bottom, #128aa7 4%,#19b4ca 1%,#fff 20.5%,#6ad2dc 20.5%,#0c739f 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1592ae', endColorstr='#0f8cc5',GradientType=0 );
+/*  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1592ae', endColorstr='#0f8cc5',GradientType=0 ); */
 }
 
 .container {
@@ -45,19 +45,22 @@ body {
   width: 290px;
   height: 176px;
   margin-left: 30px;
+  position: relative;
 }
 
-.logo-box img {
-  position: relative;
-  top: 13px;
-  left: 0;
+.logo-box a {
+  display: block;
+  width: 283px;
+  height: 176px;
+  background: url('../img/logo.png') no-repeat;
+  background-position: 0 11px;
 }
 
-.logo-text {
-  position: relative;
-  top: -56px;
-  left: 71px;
-  z-index: 10;
+.logo-box span {
+ display: block;
+  position: absolute;
+  top: 108px;
+  left: 72px
 }
 
 .contact-us-box {
@@ -65,8 +68,7 @@ body {
   margin: 10px 30px 0 0;
 }
 
-
-h1 {
+.contact-us-box-header {
  color: #128aa7;
  font-family: "TahomaBold", Arial, sans-serif;
  font-size: 12px;
@@ -76,21 +78,13 @@ h1 {
  text-align: left;
 }
 
-h3 {
+.logo-box-text {
  color: #128aa7;
  font-family: "TahomaRegular", Arial, sans-serif;
  font-size: 12px;
  line-height: 1.4;
  text-align: left;
 }
-
-h4 {
- color: #128aa7;
- font-family: "TahomaRegular", Arial, sans-serif;
- font-size: 10px;
- line-height: 1.4;
-}
-
 
 .contact-us-box a {
   text-decoration: none;
@@ -102,11 +96,20 @@ h4 {
   width: 650px;
 }
 
-figure {
+.flag-link {
   float: right;
-  height: 60px;
+  width: 55px;
+  height: 68px;
   text-align: center;
-  margin: 30px 0 0 15px;
+  margin: 30px 0 0 5px;
+}
+
+.flag-link a {
+  color: #128aa7;
+  font-family: "TahomaRegular", Arial, sans-serif;
+  font-size: 10px;
+  line-height: 1.4;
+  text-decoration: underline;
 }
 
 .header-image {
