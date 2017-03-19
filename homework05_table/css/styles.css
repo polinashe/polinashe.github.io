@@ -1,0 +1,125 @@
+body {
+  background-color: #cadde3;
+}
+
+.wrapper {
+  width: 462px;
+  margin: 0 auto;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+/************* BORDER SETTINGS ************/
+
+td {
+  border-left: 8px solid #000;
+}
+
+tr {
+  border-bottom: 8px solid #000;
+}
+
+  tr:nth-child(5),
+  tr:nth-child(6),
+  tr:last-child {
+  border-bottom: none;
+}
+
+  tr:nth-child(6),
+  tr:last-child {
+  border-top:  8px solid #000;
+}
+
+td:first-child {
+  border-left: none;
+}
+
+/************* HEIGHT SETTINGS ************/
+
+tr:nth-child(1) {
+  height: 45px;
+}
+
+tr:nth-child(2),
+tr:nth-child(3) {
+  height: 127px;
+}
+
+tr:nth-child(4),
+tr:nth-child(5) {
+  height: 62px;
+}
+
+tr:nth-child(6),
+tr:nth-child(7) {
+  height: 31px;
+}
+
+/************* WIDTH SETTINGS ************/
+
+td:nth-child(1) {
+  width: 48px;
+}
+
+td:nth-child(2),
+td:nth-child(3) {
+  width: 61px;
+}
+
+td:nth-child(4) {
+  width: 130px;
+}
+
+td:nth-child(5),
+td:nth-child(6) {
+  width: 76px;
+}
+
+/************* BACKGROUNG-COLOR SETTINGS ************/
+
+tr:nth-child(1) td:nth-child(3) {
+  background-color: #ffeb47; /* yellow */
+}
+
+tr:nth-child(2) td:nth-child(2) {
+  background-color: #ff5b2f; /* red */
+}
+
+tr:nth-child(2) td:nth-child(3) {
+  background-color: #ffeb47; /* yellow */
+}
+
+tr:nth-child(4) td:nth-child(1) {
+  background-color: #313131; /* black */
+}
+
+tr:nth-child(4) td:nth-child(2) {
+  background-color: #313131; /* black */
+}
+
+tr:nth-child(5) td:nth-child(1) {
+  background-color: #ffeb47; /* yellow */
+}
+
+tr:nth-child(5) td:nth-child(2) {
+  background-color: #313131; /* black */
+}
+
+tr:nth-child(5) td:nth-child(3) {
+  background-color: #313131; /* black */
+}
+
+tr:nth-child(5) td:nth-child(5) {
+  background-color: #054688; /* blue */
+}
+
+tr:nth-child(6) td:nth-child(2) {
+  background-color: #313131; /* black */
+}
+
+tr:nth-child(6) td:nth-child(3) {
+  background-color: #054688; /* blue */
+}
