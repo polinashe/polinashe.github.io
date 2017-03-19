@@ -99,12 +99,13 @@ body {
 
 .flag-link {
   float: right;
-  width: 55px;
-  height: 68px;
   text-align: center;
   margin: 30px 0 0 5px;
 }
 
+.flag-link img {
+  display: block;
+}
 
 .flag-link a {
   color: #128aa7;
