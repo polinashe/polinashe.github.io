@@ -214,60 +214,32 @@ ul:after {
 /*----------------- CONTENT ----------------*/
 
 .content {
-  float: left;
-  width: 100%;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
 }
 
-.wrapper-column-right {
-  float: left;
-  width: 100%;
-  background-color: #edeef0;
-  overflow:hidden;
-  position:relative;
-}
-
-.wrapper-column-central {
-  float: left;
-  width: 100%;
-  background-color: #fff;
-  position: relative;
-  right: 20%;
-  border-right: 1px solid #818181;
-}
-
-.wrapper-column-left {
-  float: left;
-  width: 100%;
-  background-color: #edeef0;
-  position: relative;
-  right: 60%;
-  border-right: 1px solid #818181;
+.column-left,
+.column-central,
+.column-right {
+  padding: 10px;
 }
 
 .column-left {
-  width: 17%;
-  float: left;
-  position:relative;
-  left: 81.5%;
-  padding: 10px 0;
+  width: 20%;
+  background-color: #edeef0;
+  border-right: 1px solid #818181;
 }
 
 .column-central {
-  width: 57%;
-  float: left;
-  position:relative;
-  left: 84.5%;
-  padding: 10px 0;
-
+  width: 60%;
+  background-color: #fff;
 }
 
 .column-right {
-  width: 17%;
-  float: left;
-  position:relative;
-  left: 87.5%;
-  padding: 10px 0;
+  width: 20%;
+  background-color: #edeef0;
+  border-left: 1px solid #818181;
 }
 
 .left-right-columns-text {
@@ -284,8 +256,7 @@ ul:after {
  font-size: 18px;
  text-shadow: 1px 1px 1px rgba(0,0,0,.5);
  text-align: center;
- padding-bottom: 5px;
-
+ padding-bottom: 10px;
 }
 
 /*----------------- FOOTER ----------------*/
