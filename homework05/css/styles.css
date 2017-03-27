@@ -1,0 +1,267 @@
+@font-face {
+  font-family: HelveticaNeue;
+  src: local("HelveticaNeue"), url('../fonts/HelveticaNeueLTStd Lt.woff');
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+/*----------------- HEADER ----------------*/
+
+nav {
+  background-color: #07508f;
+  width: 1215px;
+  height: 36px;
+}
+
+nav ul{
+  position: relative;
+  float: right;
+  margin-right: 10px;
+}
+
+nav ul li {
+  float: left;
+  position: relative;
+  white-space: nowrap;
+}
+
+nav ul li a {
+  display: block;
+  line-height: 36px;
+  padding: 0 15px;
+  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  color: #4eabda;
+}
+
+nav ul li:nth-child(6) {
+  border-left: 1px solid #4eabda;
+}
+
+nav ul li:nth-child(6) a:before {
+  content: "\f024";
+  font-family: FontAwesome;
+  color: #ffffff;
+  padding-right: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #4eabda;
+  color: #fff;
+}
+
+nav ul li:nth-child(7) {
+  padding: 0 15px;
+}
+
+nav ul li:nth-child(7):hover {
+  background-color: #4eabda;
+}
+
+nav ul li:nth-child(7) a {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.log-in-text {
+  display: inline-block;
+  line-height: 36px;
+  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.log-in-href {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/*----------------- CONTENT ----------------*/
+
+.container {
+  width: 1215px;
+  height: 1028px;
+  background: #000 url('../img/bg1.jpg');
+  background-repeat: no-repeat;
+  background-position: center 0;
+  display: flex;
+
+}
+
+.transparent-range-wrapper {
+  margin: auto;
+  width: 560px;
+  height: 613px;
+
+}
+
+.transp {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cadastre-se {
+  width: 100%;
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+h1 {
+  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.25);
+}
+
+.form-container {
+  width: 100%;
+  height: 547px;
+}
+
+
+fieldset {
+  border: none;
+  width: 276px;
+  margin: 0 auto;
+}
+
+.fieldset-header {
+  padding: 22px 0;
+}
+
+.facebook-log-in {
+  padding: 36px 0 33px;
+}
+
+.registration-form  {
+  border-top: 2px solid #323830;
+  color: #fff;
+  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-size: 14px;
+  padding-top: 26px;
+  text-align: center;
+}
+
+
+legend {
+  padding: 0 5px;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="password"]
+ {
+  width: 276px;
+  height: 35px;
+  margin-bottom: 15px;
+  background-color: #000;
+  color: #fff;
+  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  border: none;
+  border-bottom: 1px solid #4b4b4b;
+  padding: 0 10px;
+}
+
+.log-in-button {
+  height: 35px;
+  font-family: Arial;
+  font-size: 14px;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.facebook-button {
+  background-color: #4C69BA;
+  background-image: linear-gradient(#4C69BA, #3B55A0);
+  font-family: Arial;
+  font-size: 14px;
+  color: #fff;
+}
+
+.facebook-1, .facebook-2 {
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.facebook-1::before {
+  content: "\f09a";
+  font-family: FontAwesome;
+  color: #ffffff;
+}
+
+.facebook-1 {
+  width: 35px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: 1px solid #324982;
+}
+
+.facebook-2 {
+  width: 237px;
+  border-left: 1px solid #395394;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.facebook-2::after {
+  content: "\f054";
+  font-family: FontAwesome;
+  color: #ffffff;
+  padding-left: 20px;
+  font-size: 12px;
+}
+
+.create-account-button {
+  width: 149px;
+  background-color: #3c90ce;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover {
+  background-color: #1b5288;
+  border: 1px solid #2d5777;
+  box-shadow: 0 0 3px 3px #2f7bc5;
+/*box-shadow: 0 0 9px rgba(47,123,197,.77), 0 1px #4b4b4b, inset 0 2px 5px rgba(29,26,22,.2), inset 0 0 2px rgba(0,0,0,.1);*/
+}
+
+#send-me-updates {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+#send-me-updates + label {
+  cursor: pointer;
+}
+
+.label-text {
+  color: #fff;
+  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 0;
+}
+
+.bottom-text {
+  color: #fff;
+  font-family: "HelveticaNeue", Arial, sans-serif;
+  font-size: 11px;
+  text-decoration: none;
+  line-height: 1.5em;
+  text-align: center;
+  padding: 20px 0;
+}
