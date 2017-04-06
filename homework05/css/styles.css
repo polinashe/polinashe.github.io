@@ -3,33 +3,43 @@
   src: local("HelveticaNeue"), url('../fonts/HelveticaNeueLTStd Lt.woff');
 }
 
-.wrapper {
+body {
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.wrapper {
+  margin: auto;
+  width: 1215px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
 
 /*----------------- HEADER ----------------*/
 
 nav {
-  background-color: #07508f;
-  width: 1215px;
+  margin: auto;
+  width: 100%;
   height: 36px;
+  background-color: #07508f;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-nav ul{
-  position: relative;
-  float: right;
-  margin-right: 10px;
+nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-nav ul li {
-  float: left;
-  position: relative;
-  white-space: nowrap;
-}
-
-nav ul li a {
+nav a {
   display: block;
   line-height: 36px;
   padding: 0 15px;
@@ -39,42 +49,48 @@ nav ul li a {
   color: #4eabda;
 }
 
-nav ul li:nth-child(6) {
-  border-left: 1px solid #4eabda;
+nav ul li:nth-child(5) {
+  border-right: 1px solid #4eabda;
 }
 
-nav ul li:nth-child(6) a:before {
+/*
+nav ul:after {
+  content: "|";
+  font-size: 28px;
+  color: #4eabda;
+  padding-right: 10px;
+}*/
+
+.box-minhas-ofertas a:before {
   content: "\f024";
   font-family: FontAwesome;
   color: #ffffff;
   padding-right: 10px;
 }
 
-nav ul li a:hover {
+nav a:hover {
   background-color: #4eabda;
   color: #fff;
 }
 
-nav ul li:nth-child(7) {
-  padding: 0 15px;
-}
-
-nav ul li:nth-child(7):hover {
-  background-color: #4eabda;
-}
-
-nav ul li:nth-child(7) a {
+.box-log-in a {
   display: inline-block;
   padding: 0 5px;
 }
 
-.log-in-text {
+.box-log-in {
   display: inline-block;
   line-height: 36px;
   font-family: "HelveticaNeue", Arial, sans-serif;
   font-size: 14px;
   text-decoration: none;
   color: #ffffff;
+  padding: 0 10px;
+  margin-right: 15px;
+}
+
+.box-log-in:hover {
+  background-color: #4eabda;
 }
 
 .log-in-href {
@@ -85,28 +101,28 @@ nav ul li:nth-child(7) a {
 /*----------------- CONTENT ----------------*/
 
 .container {
-  width: 1215px;
-  height: 1028px;
-  background: #000 url('../img/bg1.jpg');
+  width: 100%;
+  min-height: 100vh;
+  background: #fff url('../img/bg1.jpg');
   background-repeat: no-repeat;
   background-position: center 0;
+  background-size: cover;
   display: flex;
-
-}
-
-.transparent-range-wrapper {
-  margin: auto;
-  width: 560px;
-  height: 613px;
-
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .transp {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.cadastre-se,
+.form-container {
+  width: 560px;
+}
+
 .cadastre-se {
-  width: 100%;
   height: 64px;
   line-height: 64px;
   text-align: center;
@@ -122,23 +138,76 @@ h1 {
 }
 
 .form-container {
-  width: 100%;
-  height: 547px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /*flex: 1 0 560px; */
 }
 
+.facebook-log-in-box {
+  display: inline-flex;
+  flex-direction: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 36px 0 33px;
+}
+
+.facebook-button {
+  background-color: #4C69BA;
+  background-image: linear-gradient(#4C69BA, #3B55A0);
+  font-family: Arial;
+  font-size: 14px;
+  color: #fff;
+}
+
+.facebook-btn-part-1, .facebook-btn-part-2 {
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.facebook-btn-part-1::before {
+  content: "\f09a";
+  font-family: FontAwesome;
+  color: #ffffff;
+}
+
+.facebook-btn-part-1 {
+  width: 37px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: 1px solid #324982;
+}
+
+.facebook-btn-part-2 {
+  width: 237px;
+  border-left: 1px solid #395394;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.facebook-btn-part-2::after {
+  content: "\f054";
+  font-family: FontAwesome;
+  color: #ffffff;
+  padding-left: 20px;
+  font-size: 12px;
+}
+
+fieldset,
+.bottom-text {
+  width: 276px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: calc(276px - 2*10px - 2px)
+}
 
 fieldset {
   border: none;
-  width: 276px;
-  margin: 0 auto;
-}
-
-.fieldset-header {
-  padding: 22px 0;
-}
-
-.facebook-log-in {
-  padding: 36px 0 33px;
 }
 
 .registration-form  {
@@ -150,7 +219,6 @@ fieldset {
   text-align: center;
 }
 
-
 legend {
   padding: 0 5px;
   text-align: center;
@@ -159,7 +227,7 @@ legend {
 input[type="text"],
 input[type="password"]
  {
-  width: 276px;
+/*  width: 258px; */
   height: 35px;
   margin-bottom: 15px;
   background-color: #000;
@@ -167,7 +235,7 @@ input[type="password"]
   font-family: "HelveticaNeue", Arial, sans-serif;
   font-size: 14px;
   text-decoration: none;
-  border: none;
+  border: 1px solid transparent;
   border-bottom: 1px solid #4b4b4b;
   padding: 0 10px;
 }
@@ -183,52 +251,15 @@ input[type="password"]
   padding: 0;
 }
 
-.facebook-button {
-  background-color: #4C69BA;
-  background-image: linear-gradient(#4C69BA, #3B55A0);
-  font-family: Arial;
-  font-size: 14px;
-  color: #fff;
-}
-
-.facebook-1, .facebook-2 {
-  display: inline-block;
-  height: 36px;
-  line-height: 36px;
-  text-align: center;
-}
-
-.facebook-1::before {
-  content: "\f09a";
-  font-family: FontAwesome;
-  color: #ffffff;
-}
-
-.facebook-1 {
-  width: 35px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-right: 1px solid #324982;
-}
-
-.facebook-2 {
-  width: 237px;
-  border-left: 1px solid #395394;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.facebook-2::after {
-  content: "\f054";
-  font-family: FontAwesome;
-  color: #ffffff;
-  padding-left: 20px;
-  font-size: 12px;
-}
-
 .create-account-button {
   width: 149px;
-  background-color: #3c90ce;
+  background: linear-gradient( #4eabda, #398bcc, #2f7bc4);
+}
+
+.create-account-button:hover,
+.create-account-button:focus {
+  background-color: #5B7BD5;
+  background-image: linear-gradient(#5B7BD5, #4864B1);
 }
 
 input[type="text"]:hover,
@@ -257,6 +288,7 @@ input[type="password"]:hover {
 }
 
 .bottom-text {
+  display: inline-block;
   color: #fff;
   font-family: "HelveticaNeue", Arial, sans-serif;
   font-size: 11px;
