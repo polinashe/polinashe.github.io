@@ -3,44 +3,34 @@
   src: local("HelveticaNeue"), url('../fonts/HelveticaNeueLTStd Lt.woff');
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
 .wrapper {
-  margin: auto;
-  width: 1215px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
 }
 
 /*----------------- HEADER ----------------*/
 
 nav {
-  margin: auto;
-  width: 100%;
-  height: 36px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
   background-color: #07508f;
+}
+
+.menu {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
   align-items: center;
 }
 
-nav ul {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-nav a {
-  display: block;
+.menu a,
+.nav-right-box-1 a,
+.nav-right-box-2 a {
+  display: inline-block;
+  height: 36px;
   line-height: 36px;
   padding: 0 15px;
   font-family: "HelveticaNeue", Arial, sans-serif;
@@ -49,38 +39,34 @@ nav a {
   color: #4eabda;
 }
 
-nav ul li:nth-child(5) {
-  border-right: 1px solid #4eabda;
+.nav-right-box-1:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+  line-height: 20px;
+  width: 1px;
+  background-color: #4eabda;
 }
 
-/*
-nav ul:after {
-  content: "|";
-  font-size: 28px;
-  color: #4eabda;
-  padding-right: 10px;
-}*/
-
-.box-minhas-ofertas a:before {
+.nav-right-box-1 a:before {
   content: "\f024";
   font-family: FontAwesome;
   color: #ffffff;
   padding-right: 10px;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
   background-color: #4eabda;
   color: #fff;
 }
 
-.box-log-in a {
-  display: inline-block;
+.nav-right-box-2 a {
   padding: 0 5px;
 }
 
-.box-log-in {
-  display: inline-block;
-  line-height: 36px;
+.nav-right-box-2 {
   font-family: "HelveticaNeue", Arial, sans-serif;
   font-size: 14px;
   text-decoration: none;
@@ -89,28 +75,22 @@ nav a:hover {
   margin-right: 15px;
 }
 
-.box-log-in:hover {
-  background-color: #4eabda;
-}
 
-.log-in-href {
-  color: #ffffff;
-  text-decoration: underline;
-}
 
 /*----------------- CONTENT ----------------*/
 
 .container {
   width: 100%;
   min-height: 100vh;
-  background: #fff url('../img/bg1.jpg');
-  background-repeat: no-repeat;
-  background-position: center 0;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
+  background: #fff url('../img/bg1.jpg');
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
 }
 
 .transp {
@@ -126,6 +106,7 @@ nav a:hover {
   height: 64px;
   line-height: 64px;
   text-align: center;
+  margin-top: 10px;
   margin-bottom: 2px;
 }
 
@@ -142,57 +123,76 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  /*flex: 1 0 560px; */
 }
 
 .facebook-log-in-box {
-  display: inline-flex;
-  flex-direction: row nowrap;
+  display: flex;
+  flex: row nowrap;
   justify-content: center;
   align-items: center;
+  width: 100%;
   padding: 36px 0 33px;
 }
 
-.facebook-button {
-  background-color: #4C69BA;
-  background-image: linear-gradient(#4C69BA, #3B55A0);
-  font-family: Arial;
-  font-size: 14px;
-  color: #fff;
-}
-
-.facebook-btn-part-1, .facebook-btn-part-2 {
+.part-1,
+.part-2 {
   display: inline-block;
   height: 36px;
   line-height: 36px;
   text-align: center;
+  background-color: #4C69BA;
+  background-image: linear-gradient(#4C69BA, #3B55A0);
+  overflow: hidden;
 }
 
-.facebook-btn-part-1::before {
-  content: "\f09a";
-  font-family: FontAwesome;
-  color: #ffffff;
-}
-
-.facebook-btn-part-1 {
-  width: 37px;
+.part-1 {
+  width: 36px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   border-right: 1px solid #324982;
 }
 
-.facebook-btn-part-2 {
-  width: 237px;
-  border-left: 1px solid #395394;
+.part-2 {
+  width: 238px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  border-left: 1px solid #395394;
 }
 
-.facebook-btn-part-2::after {
+.facebook-button-link {
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: normal;
+  color: #fff;
+}
+
+.facebook-button-link span b {
+  font-weight: bold;
+}
+
+.part-1::after {
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  width: 32px;
+  text-align: center;
+  content: "\f09a";
+  font-family: FontAwesome;
+  font-size: 14px;
+}
+
+.part-2::after {
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  width: 36px;
+  text-align: center;
   content: "\f054";
   font-family: FontAwesome;
-  color: #ffffff;
-  padding-left: 20px;
   font-size: 12px;
 }
 
@@ -227,7 +227,6 @@ legend {
 input[type="text"],
 input[type="password"]
  {
-/*  width: 258px; */
   height: 35px;
   margin-bottom: 15px;
   background-color: #000;
@@ -258,15 +257,16 @@ input[type="password"]
 
 .create-account-button:hover,
 .create-account-button:focus {
-  background-color: #5B7BD5;
-  background-image: linear-gradient(#5B7BD5, #4864B1);
+   background-image: linear-gradient(#5B7BD5, #4864B1);
 }
 
 input[type="text"]:hover,
-input[type="password"]:hover {
+input[type="text"]:focus,
+input[type="password"]:hover,
+input[type="password"]:focus {
   background-color: #1b5288;
   border: 1px solid #2d5777;
-  box-shadow: 0 0 3px 3px #2f7bc5;
+  box-shadow: 0 0 2px 2px #2f7bc5;
 /*box-shadow: 0 0 9px rgba(47,123,197,.77), 0 1px #4b4b4b, inset 0 2px 5px rgba(29,26,22,.2), inset 0 0 2px rgba(0,0,0,.1);*/
 }
 
