@@ -127,7 +127,7 @@ h1 {
 
 .facebook-log-in-box {
   display: flex;
-  flex: row nowrap;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   width: 100%;
