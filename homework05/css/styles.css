@@ -5,8 +5,13 @@
 
 .wrapper {
   width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: #fff url('../img/bg1.jpg');
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
 }
 
 /*----------------- HEADER ----------------*/
@@ -81,16 +86,11 @@ nav a:focus {
 
 .container {
   width: 100%;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  background: #fff url('../img/bg1.jpg');
-  background-repeat: no-repeat;
-  background-position: center 0;
-  background-size: cover;
 }
 
 .transp {
