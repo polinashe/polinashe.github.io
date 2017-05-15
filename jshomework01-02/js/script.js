@@ -49,17 +49,17 @@ function pow(x, n) {
     resDescription = '';
   }
 
-  if (resDescription !== '')  {
-    return console.log(resMessage, res, '\n\n\n* ', resDescription,'\n\n\n');
-  }
-  else  { return console.log('\n\n\n'); }
+ if (resDescription !== '') {
+     return console.log(resMessage, res, '\n\n\n *', resDescription,'\n\n\n');
+ }
+ else {
+    return console.log(resMessage, res, '\n\n\n');
+ }
 }
 
 pow(x, n);
 
 }
-
-
 
 // ---------Задача №2-------------
 function task2() {
